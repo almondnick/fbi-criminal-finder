@@ -17,39 +17,40 @@
             <section class = "description">
                 Webpage description.
             </section>
-
-            <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                  <input id = "nameInput" class="input" type="text" placeholder="(First Name)">
-                </div>
-              </div>
-              
-              <div class="field">
-                <label class="label">Birthday</label>
-                <div class="control">
-                  <input id = "birthdayInput" class="input" type="text" placeholder="(Month Day, Year)">
-                </div>
-
+            <form id = "form">
                 <div class="field">
-                    <label class="label">Height</label>
+                    <label class="label">Name</label>
                     <div class="control">
-                      <input id = "heightInput" class="input" type="text" placeholder="inches">
+                      <input id = "nameInput" class="input" type="text" placeholder="(First Name)">
                     </div>
-
-                    <label class="checkbox">
-                        <input id = "locationInput" type="checkbox">
-                        Allow Location?
-                      </label>
-              </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Birthday</label>
+                    <div class="control">
+                      <input id = "birthdayInput" class="input" type="text" placeholder="(Month Day, Year)">
+                    </div>
+    
+                    <div class="field">
+                        <label class="label">Height</label>
+                        <div class="control">
+                          <input id = "heightInput" class="input" type="text" placeholder="inches">
+                        </div>
+    
+                        <label class="checkbox">
+                            <input id = "locationInput" type="checkbox">
+                            Allow Location?
+                          </label>
+                  </div>
+                  <div>
+                    <button id="button-id" class="submit-btn" href="/list.html"> SUBMIT! </button>
+                </div>
+            </form>
         </content>
-        
-        <div>
-            <button id="button-id" class="submit-btn" href="/list.html"> SUBMIT! </button>
-        </div>
 
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script 
-            src = "Assets/script.js">
+            src = "./assets/script.js">
         </script>
     </body>
 </html>
