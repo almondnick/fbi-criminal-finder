@@ -5,7 +5,7 @@
         <meta name = "viewport" content = "width=device=width, initial-scale=1">
         <title> FBI Criminal Finder </title>
         <link rel = "stylesheet" type = "text/css" href = "Assets/style.css">
-       <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
 
     <body>
@@ -18,16 +18,30 @@
                 Webpage description.
             </section>
 
-            <form>
-                <label> Allow location tracking? </label>
-                <input type = "checkbox"><br>
-                <label> First-Name </label><br>
-                <input type="text"><br>
-                <label> Birthday </label><br>
-                <input type = "text" placeholder="(month day, year)"><br>
-                <label> Height (inches) </label><br>
-                <input type = "text"><br>
-            </form>
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input id = "nameInput" class="input" type="text" placeholder="(First Name)">
+                </div>
+              </div>
+              
+              <div class="field">
+                <label class="label">Birthday</label>
+                <div class="control">
+                  <input id = "birthdayInput" class="input" type="text" placeholder="(Month Day, Year)">
+                </div>
+
+                <div class="field">
+                    <label class="label">Height</label>
+                    <div class="control">
+                      <input id = "heightInput" class="input" type="text" placeholder="inches">
+                    </div>
+
+                    <label class="checkbox">
+                        <input id = "locationInput" type="checkbox">
+                        Allow Location?
+                      </label>
+              </div>
         </content>
         
         <div>
