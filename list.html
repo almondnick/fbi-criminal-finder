@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBI Criminal Finder - Most Wanted List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/list.css">
+    <title>FBI Most Wanted Matchmaker - The List</title>
 </head>
+
 <body>
-    <h1>FBI Criminal Finder</h1>
-    <div>
-        <h2>FBI Most Wanted Criminals Near the City of: <span id="user-city"></span></h2>
-        <div id="location-container"></div>
-    </div>
-    <div>
-        <h2>FBI Most Wanted Criminals with the Name: <span id="user-name"></span></h2>
-        <div id="name-container"></div>
-    </div>
-    <div>
-        <h2>FBI Most Wanted Criminals with the Birthday: <span id="user-birthday"></span></h2>
-        <div id="birthday-container"></div>
-    </div>
-    <div>
-        <h2>FBI Most Wanted Criminals with the Height: <span id="user-height"></span> Inches</h2>
-        <div id="height-container"></div>
-    </div>
+    <header class="column">
+        <figure class="image is-128x128 custom-image">
+            <img src="./assets/Seal_of_the_FBI.svg.png">
+          </figure>
+          <h1 class="column is-size-2 has-text-centered has-text-weight-bold">FBI Most Wanted Matchmaker</h1>
+    </header>
+    <main>
+        <div class="column">
+            <h2 class="is-size-4 has-text-centered has-text-weight-bold">Criminals Near: <span id="userLocation"></span></h2>
+            <div id="location-content"></div>
+        </div>
+        <div class="column p-2">
+            <h2 class="is-size-4 has-text-centered has-text-weight-bold">Criminals with the Name: <span id="userName"></span></h2>
+            <div id="name-content"></div>
+        </div>
+        <div class="column p-2">
+            <h2 class="is-size-4 has-text-centered has-text-weight-bold">Criminals with the Birthday: <span id="userBirthday"></span></h2>
+            <div id="birthday-content"></div>
+        </div>
+        <div class="column p-2">
+            <h2 class="is-size-4 has-text-centered has-text-weight-bold">Criminals with the Height: <span id="userHeight"></span> inches</h2>
+            <div id="height-content"></div>
+        </div>
+        <div>
+            <a href="https://tips.fbi.gov/home" target="_blank"><button class="button is-danger is-rounded my-5 mx-2">FBI Tipline</button></a>
+            <a href="./index.html"><button class="button is-white is-rounded my-5 mx-2">Home</button></a>
+        </div>
+        <br>
+    </main>
 
-    <div>
-        <button><a href="https://tips.fbi.gov/home" >FBI Tip Form</a></button>
-        <button><a href="./index.html">Back to Home</a></button>
-    </div>
-
-    <script src = "assets/script.js"></script>
+    <script src="./assets/listScript.js"></script>
 </body>
 </html>

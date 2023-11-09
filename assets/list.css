@@ -3,26 +3,18 @@
 }
 
 body {
-    width: 100vw;
-    color: #ffffff;
     background-color: #000435;
+    color: #ffffff;
     text-align: center;
 }
 
-.custom-ul {
-    display: inline-block;
-    text-align: left;
-    list-style-type: none;
-}
-
-h1,
-h2 {
+h1 {
     text-decoration: underline;
     color: #ffd61a;
 }
 
-.custom-form {
-    display: inline-block;
+h2 {
+    color: #ffd61a;
 }
 
 .custom-image {

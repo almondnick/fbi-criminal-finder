@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device=width, initial-scale=1">
-        <title> FBI Criminal Finder </title>
-        <link rel = "stylesheet" type = "text/css" href = "Assets/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>FBI Most Wanted Matchmaker</title>
+</head>
+<body>
+  <header class="column">
+    <figure class="image is-128x128 custom-image">
+      <img src="./assets/Seal_of_the_FBI.svg.png">
+    </figure>
+    <h1 class="column is-size-2 has-text-centered has-text-weight-bold">FBI Most Wanted Matchmaker</h1>
+    <p class="has-text-centered is-size-5">Have you ever wondered if you share any similarities with the FBI's most wanted criminals? Welcome to 
+    <span>FBI Most Wanted Matchmaker</span>, an online platform that allows users to input their name, birthday, 
+    height, and location, and discover if they have any common traits with the most wanted criminals in the country.</p>
+    <br>
+    <h2 class="column is-size-2 has-text-centered has-text-weight-bold">How it Works:</h2>
+    <div class="container">
+      <ul class="column has-text-centered is-size-5 custom-ul">
+        <li>1. Input Your Information. It is important that you input your information in the format displayed below the input box!</li>
+        <li>2. Our JavaScript pulls information from the FBI database and looks for potential matches to your inputs.</li>
+        <li>3. In moments, a list is displayed with criminals that share the same traits as your inputs.</li>
+        <li>4. Share with your friends and family to see if they have any surprising matches with these notorious criminals.</li>
+      </ul>
+    </div>
+    <br>
+    <p class="column has-text-centered is-size-6">*Disclaimer: FBI Most Wanted Matchmaker is purely for entertainment and recreational purposes. If you have questions or concerns about something you see, 
+    please contact your local FBI field office.*</p>
+    <a href="https://www.fbi.gov/contact-us/field-offices/@@castle.cms.querylisting/6bd7cedb14f545e3a984775195ea3d30" target="_blank"><button class="button is-danger is-rounded mt-4">FBI Field Offices</button></a>
+  </header>
 
-    <body>
-        <header class = "header">
-            <h1> FBI Criminal Finder</h1>
-        </header>
-
-        <content>
-            <section class = "description">
-                Webpage description.
-            </section>
-            <form id = "form">
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                      <input id = "nameInput" class="input" type="text" placeholder="(First Name)">
-                    </div>
-                  </div>
-                  
-                  <div class="field">
-                    <label class="label">Birthday</label>
-                    <div class="control">
-                      <input id = "birthdayInput" class="input" type="text" placeholder="(Month Day, Year)">
-                    </div>
-    
-                    <div class="field">
-                        <label class="label">Height</label>
-                        <div class="control">
-                          <input id = "heightInput" class="input" type="text" placeholder="inches">
-                        </div>
-    
-                        <label class="checkbox">
-                            <input id = "locationInput" type="checkbox">
-                            Allow Location?
-                          </label>
-                  </div>
-                  <div>
-                    <button id="button-id" class="submit-btn" href="/list.html"> SUBMIT! </button>
-                </div>
-            </form>
-        </content>
-
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script 
-            src = "./assets/script.js">
-        </script>
-    </body>
+  <main class="py-5">
+    <form class="box is-three-fifths custom-form">
+      <div class="field">
+        <label class="label has-text-black">First Name:</label>
+        <div class="control">
+          <input id="nameInput" class="input is-black is-rounded" type="text" placeholder="First Name">
+        </div>
+        <p class="help">e.g. John</p>
+      </div>
+      <div class="field">
+        <label class="label has-text-black">Birthday:</label>
+        <div class="control">
+          <input id="birthdayInput" class="input is-black is-rounded" type="text" placeholder="Birthday">
+        </div>
+        <p class="help">e.g. January 1, 1984</p>
+      </div>
+      <div class="field">
+        <label class="label has-text-black">Height</label>
+        <div class="control">
+          <input id="heightInput" class="input is-black is-rounded" type="text" placeholder="Height (in inches)">
+        </div>
+        <p class="help">e.g. 70 (for reference: 5 ft = 60 inches, 6 ft = 72 inches)</p>
+      </div>
+      <div>
+        <label class="checkbox py-2">
+          <input id="locationInput" type="checkbox">
+          Allow This Website to Use Your Location?
+        </label>
+      </div>
+      <br>
+      <div>
+        <button class="button is-rounded is-black submit-btn">Find Matches</button>
+      </div>
+      <figure class="image is-128x128 custom-image">
+        <img src="./assets/Seal_of_the_FBI.svg.png">
+      </figure>
+    </form>
+  </main>
+  
+  <script src="./assets/script.js"></script>
+</body>
 </html>
