@@ -1,5 +1,4 @@
 var nameInput = document.getElementById("nameInput");
-var birthdayInput = document.getElementById("birthdayInput");
 var heightInput = document.getElementById("heightInput");
 var locationInput = document.getElementById("locationInput");
 var submitBtn = document.querySelector(".submit-btn")
@@ -12,24 +11,31 @@ var userState;
 function handleFormSubmit(event){
     event.preventDefault();
     localStorage.setItem("name", nameInput.value);
-    localStorage.setItem("birthday", birthdayInput.value);
     localStorage.setItem("height", heightInput.value);
     localStorage.setItem("location", locationInput.checked);
 
     var checked = JSON.parse(localStorage.getItem("location"));
+    console.log(checked);
     if(checked == true ){
         fetch(geoApi)
                 .then(function(response){
                     return response.json();
                 })
                 .then(function(data){
+                    console.log(data);
                     userCity = (data.city);
                     userState = (data.region);
                     localStorage.setItem("user-city", userCity);
                     localStorage.setItem("user-state", userState);
+                    location.assign("./list.html");
                 })
+    }else{
+        userCity = "";
+        userState = "";
+        localStorage.setItem("user-city", userCity);
+        localStorage.setItem("user-state", userState);
+        location.assign("./list.html");
     }
-    location.assign("./list.html");
 }
 
 submitBtn.addEventListener("click", handleFormSubmit);
