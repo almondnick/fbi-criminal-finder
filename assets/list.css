@@ -32,9 +32,6 @@ h2 {
 }
 
 .criminal-img{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
     margin: 7px;
     border: 2px solid black;
 }
